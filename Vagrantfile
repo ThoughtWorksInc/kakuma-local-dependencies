@@ -71,9 +71,7 @@ Vagrant.configure(2) do |config|
      sudo apt-get update
      sudo apt-get install -y openjdk-8-jdk
      sudo dpkg -i /vagrant/elasticsearch-2.3.4.deb
-     sudo -i
-     cp -f /vagrant/elasticsearch.yml /etc/elasticsearch
-     exit
+     sudo cp -f /vagrant/elasticsearch.yml /etc/elasticsearch
      sudo service elasticsearch start
    SHELL
 end
