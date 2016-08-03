@@ -1,0 +1,1 @@
+DBPASSWORD=sausage vagrant up
