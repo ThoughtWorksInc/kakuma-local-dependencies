@@ -71,10 +71,10 @@ Vagrant.configure(2) do |config|
      sudo cp /vagrant/pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf 
      sudo cp /vagrant/postgresql.conf /etc/postgresql/9.3/main/postgresql.conf 
      sudo /etc/init.d/postgresql restart
-     sudo -u postgres psql -c "CREATE USER testuser WITH PASSWORD '$1';"
-     sudo -u postgres createdb spiketest testuser
+     sudo -u postgres psql -c "CREATE USER kakuma_user WITH PASSWORD '$1';"
+     sudo -u postgres createdb kakuma_dev kakuma_user
 # to connect to postgres from the vagrant ssh command line:
-# psql -d spiketest -U testuser -h localhost
-# you'll then be prompted for the password.
+# psql -d kakuma_dev -U kakuma_user -h localhost
+# you'll then be pro:mpted for the password.
    SHELL
 end
